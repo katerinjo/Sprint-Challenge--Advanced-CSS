@@ -155,10 +155,39 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
+img {
+  border-radius: 5px;
+}
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+nav {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: #F6F6F6;
+  border-bottom: 2px solid #F1F1F1;
+}
+nav h1 {
+  font-size: 4rem;
+}
+nav h1,
+nav a {
+  color: #454A59;
+}
+nav ul {
+  max-width: 45rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+nav ul li {
+  font-size: 1.6rem;
 }
 footer {
   color: #22283B;

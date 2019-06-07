@@ -1,1 +1,25 @@
 // Navigation code here
+
+nav {
+    .centered-column();
+    height: 100px;
+    background-color: @nav-bg;
+    border-bottom: 2px solid @nav-border;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h1, a {
+        color: @nav-font;
+    }
+
+    ul {
+        max-width: 45rem;
+        .horiz-spaced();
+
+        li {
+            font-size: 1.6rem;
+        }
+    }
+}
