@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+An adaptive website responds to changes in viewport size at specific points, but a fully responsive website displays differently every point along the way, stretching and shrinking and breaking as you go. The former might be discrete in transitioning at various points, but the latter is smooth in its transitions the whole time.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Ideally, the end user won't know the difference. The distinction is about how the CSS is written. Default CSS rules can be overridden depending on the status of media queries, with the default rules being "first" literally in the code but also in order of creation. (Well, doing the media query stuff first might work? But that sure seems like a headache and it's not how we've done it.) Mobile first has designs meant for small (ie mobile device) viewports as the default and modifies the rules with `min-width` queries, while desktop first CSS starts with large designs by default and modifies the rules with `max-width` queries when the viewport is smaller.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+Most browsers have 16px as the default font size, and 62.5% of 16 is 10, making 1 rem equal to 10px thruout the document. The advantage of using a percentage instead of a pixel size is that people sometimes change that setting, and being responsive to their need for the fonts to be bigger or smaller makes the site accessible.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing is translating from a better language to a worse language (the latter being bad but necessary because of coordination failures in the industry), so that you can get the advantages programming with the better language. It's just like how everyone and their dog is making compile-to-Javascript languages these days because everyone hates Javascript but still has to use it because browsers don't know anything else (yet).
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+I like the nesting that preprocessing allows. Design space is huge, and figuring out the best way to do things is hard, but "put the thing in the other thing" is a simple strategy that cuts out a huge number of confusing possibilities. The mixins, parametric or not, are very powerful, but I don't have good strategies for picking the best ways to do things yet, so those are the most troublesome at this point.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
