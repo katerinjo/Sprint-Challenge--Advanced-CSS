@@ -19,6 +19,16 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media @phone {
+      justify-content: center;
+      img:not(:first-child) {
+        display: none;
+      }
+      img:first-child {
+        width: 90%;
+      }
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
@@ -45,6 +55,11 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+
+      .walk-img {
+        width: 90%;
+        margin: 15px 0;
+      }
 
     .walk-text {
       width: 50%;
@@ -76,6 +91,22 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+    }
+    @media @phone {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 50px 0;
+      .walk-text {
+        width: 90%;
+
+        .btn {
+          width: 100%;
+          padding: 20px;
+        }
+      }
+      .walk-img {
+        width: 90%;
       }
     }
   }
